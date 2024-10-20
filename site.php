@@ -32,9 +32,11 @@
   ?>
 
   <?php
+    define('DB_PATH', './jukebox.sqlite');
     // SQLite3
     // define SQLite3  tell about the database file
-    $sqlite = new Sqlite3('jukebox.sqlite');
+    // $sqlite = new Sqlite3('jukebox.sqlite');
+    $sqlite = new SQLite3(DB_PATH);
 
     // write SQL to select 10 tracks
     $statement = $sqlite->query("
